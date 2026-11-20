@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UstaadHub | Har Kaam Ka Maahir, Ek Hi Jagah — Karachi</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Service Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        navy: {
+                            800: '#1E3A5F',
+                            900: '#0F2537',
+                            950: '#091723',
+                        },
+                        solar: {
+                            400: '#FB923C',
+                            500: '#F97316',
+                            600: '#EA580C',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom subtle patterns and smooth transitions */
+        .hero-pattern {
+            background-color: #0F2537;
+            background-image: radial-gradient(rgba(249, 115, 22, 0.14) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-[#F8FAFC] text-slate-800 font-sans antialiased selection:bg-solar-500 selection:text-white">
+
+    <!-- ==================== 1. STICKY NAVIGATION BAR ==================== -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Brand SVG Logo -->
+                <a href="#" class="flex items-center gap-3 group focus:outline-none">
+                    <!-- Custom Circular Navy Badge SVG matching brand identity -->
+                    <svg class="w-12 h-12 shrink-0 transition-transform duration-300 group-hover:scale-105" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Outer Navy Circle -->
+                        <circle cx="50" cy="50" r="46" fill="#0F2537" stroke="#F97316" stroke-width="4"/>
+                        <circle cx="50" cy="50" r="39" stroke="#1E3A5F" stroke-width="2"/>
+                        
+                        <!-- Rising Bright Sun -->
+                        <path d="M36 33C36 25.268 42.268 19 50 19C57.732 19 64 25.268 64 33" fill="#FACC15"/>
+                        <path d="M50 11V15M32 18L35 21M68 18L65 21M26 30H30M70 30H74" stroke="#F97316" stroke-width="3" stroke-linecap="round"/>
+                        
+                        <!-- Solar Panel Grid -->
+                        <path d="M31 33H69L73 45H27L31 33Z" fill="#1E3A5F" stroke="#FFFFFF" stroke-width="1.8" stroke-linejoin="round"/>
+                        <line x1="43" y1="33" x2="41" y2="45" stroke="#FFFFFF" stroke-width="1.5"/>
+                        <line x1="57" y1="33" x2="59" y2="45" stroke="#FFFFFF" stroke-width="1.5"/>
+                        <line x1="29" y1="39" x2="71" y2="39" stroke="#FFFFFF" stroke-width="1.5"/>
+                        
+                        <!-- Crossed Wrench & Screwdriver -->
+                        <g stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round">
+                            <line x1="33" y1="53" x2="67" y2="75"/>
+                            <line x1="67" y1="53" x2="33" y2="75"/>
+                        </g>
+                        <!-- Wrench Head Accent -->
+                        <circle cx="33" cy="53" r="5" fill="#F97316"/>
+                        <circle cx="33" cy="53" r="2" fill="#0F2537"/>
+                        <!-- Screwdriver Handle Accent -->
+                        <line x1="60" y1="70.5" x2="67" y2="75" stroke="#F97316" stroke-width="6.5" stroke-linecap="round"/>
+                        
+                        <!-- Water Droplet at Bottom -->
+                        <path d="M50 68C50 68 43 76.5 43 81C43 84.866 46.134 88 50 88C53.866 88 57 84.866 57 81C57 76.5 50 68 50 68Z" fill="#38BDF8" stroke="#0F2537" stroke-width="1.5"/>
+                    </svg>
+                    
+                    <div class="flex flex-col">
+                        <span class="text-2xl font-extrabold tracking-tight text-navy-900 leading-none">
+                            Ustaad<span class="text-solar-500">Hub</span>
+                        </span>
+                        <span class="text-[11px] sm:text-xs font-medium text-slate-500 mt-1">
+                            Har Kaam Ka Maahir, Ek Hi Jagah.
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+                    <a href="#services" class="hover:text-solar-500 transition-colors">Services & Rate Card</a>
+                    <a href="#offers" class="hover:text-solar-500 transition-colors">Combo Offers</a>
+                    <a href="#how-it-works" class="hover:text-solar-500 transition-colors">How It Works</a>
+                    <a href="#join-ustaad" class="hover:text-solar-500 transition-colors">Join as Ustaad</a>
+                </nav>
+
+                <!-- CTA & Mobile Menu Button -->
+                <div class="flex items-center gap-3">
+                    <a href="#booking-section" class="hidden sm:inline-flex items-center gap-2 bg-solar-500 hover:bg-solar-600 text-white font-semibold text-sm px-5 py-2.5 rounded-xl shadow-md shadow-solar-500/25 transition-all active:scale-95">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Book Now</span>
+                    </a>
+                    <button id="mobile-menu-btn" aria-label="Toggle Menu" class="md:hidden p-2.5 rounded-xl text-navy-900 hover:bg-slate-100 focus:outline-none">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 px-4 pt-3 pb-5 space-y-2 shadow-lg">
+            <a href="#services" class="mobile-link block px-3 py-2.5 rounded-xl text-base font-semibold text-slate-700 hover:bg-slate-50 hover:text-solar-500">Services & Rate Card</a>
+            <a href="#offers" class="mobile-link block px-3 py-2.5 rounded-xl text-base font-semibold text-slate-700 hover:bg-slate-50 hover:text-solar-500">Combo & Monthly Plans</a>
+            <a href="#how-it-works" class="mobile-link block px-3 py-2.5 rounded-xl text-base font-semibold text-slate-700 hover:bg-slate-50 hover:text-solar-500">How It Works</a>
+            <a href="#join-ustaad" class="mobile-link block px-3 py-2.5 rounded-xl text-base font-semibold text-slate-700 hover:bg-slate-50 hover:text-solar-500">Join as Ustaad</a>
+            <div class="pt-2">
+                <a href="#booking-section" class="mobile-link flex justify-center items-center gap-2 w-full bg-solar-500 text-white font-bold py-3 rounded-xl shadow-md">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Book Ustaad Now</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== 2. HERO SECTION ==================== -->
+    <section class="hero-pattern relative overflow-hidden pt-10 pb-16 lg:pt-16 lg:pb-24">
+        <!-- Decorative Ambient Glows -->
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-solar-500/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 left-10 w-72 h-72 bg-sky-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+                
+                <!-- Left Column: Copy & Trust Badges -->
+                <div class="lg:col-span-7 text-white space-y-6">
+                    <div class="inline-flex items-center gap-2 bg-navy-800/90 border border-slate-700 px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium text-solar-400">
+                        <span class="w-2 h-2 rounded-full bg-solar-500 animate-ping"></span>
+                        <span>Karachi's #1 On-Demand Home & Solar Maintenance Network</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
+                        Solar Cleaning se lekar Ghar ke Har Kaam Tak — <span class="text-solar-500">Trusted Ustaads</span> at Your Doorstep in Karachi.
+                    </h1>
+
+                    <p class="text-slate-300 text-base sm:text-lg max-w-2xl leading-relaxed">
+                        Ab alag-alag technician dhoondne ki tension khatam! Verified Solar Cleaners, Plumbers, Electricians, aur Water Tank Cleaning experts sirf ek click par aapke ghar.
+                    </p>
+
+                    <!-- Quick Trust Badges -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+                        <div class="flex items-center gap-3 bg-navy-800/70 border border-slate-700/80 p-3.5 rounded-2xl">
+                            <div class="w-10 h-10 rounded-xl bg-solar-500/20 text-solar-400 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-user-shield text-lg"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm font-bold text-white">Verified Ustaads</p>
+                                <p class="text-xs text-slate-400">CNIC & Skill Checked</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3 bg-navy-800/70 border border-slate-700/80 p-3.5 rounded-2xl">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-award text-lg"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm font-bold text-white">7-Day Warranty</p>
+                                <p class="text-xs text-slate-400">Free Re-visit Guarantee</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3 bg-navy-800/70 border border-slate-700/80 p-3.5 rounded-2xl">
+                            <div class="w-10 h-10 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-bolt text-lg"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm font-bold text-white">60-Min Response</p>
+                                <p class="text-xs text-slate-400">Across All Karachi Areas</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Primary Action Links -->
+                    <div class="flex flex-wrap items-center gap-4 pt-2">
+                        <a href="#services" class="bg-white text-navy-900 hover:bg-slate-100 font-bold px-6 py-3.5 rounded-xl transition-all shadow-lg flex items-center gap-2">
+                            <span>Karachi Rate Card Dekhein</span>
+                            <i class="fa-solid fa-arrow-down text-solar-500"></i>
+                        </a>
+                        <a href="#join-ustaad" class="text-slate-300 hover:text-white font-semibold px-4 py-3.5 rounded-xl border border-slate-700 hover:border-slate-500 transition-all">
+                            Technician hain? Join Karein &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Interactive Quick Booking Card -->
+                <div class="lg:col-span-5">
+                    <div class="glass-card rounded-3xl p-6 sm:p-8 shadow-2xl border border-white/20">
+                        <div class="flex items-center justify-between mb-5">
+                            <div>
+                                <span class="text-xs font-bold uppercase tracking-wider text-solar-600 bg-solar-500/10 px-2.5 py-1 rounded-lg">Instant Dispatch</span>
+                                <h2 class="text-xl font-extrabold text-navy-900 mt-1.5">Quick Ustaad Booking</h2>
+                            </div>
+                            <div class="w-11 h-11 rounded-2xl bg-navy-900 text-solar-500 flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-screwdriver-wrench"></i>
+                            </div>
+                        </div>
+
+                        <form id="hero-quick-form" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-600 uppercase mb-1.5">Konsi Service Chahiye?</label>
+                                <select id="hero-service-select" class="w-full bg-slate-50 border border-slate-200 text-navy-900 font-semibold text-sm rounded-xl px-4 py-3 focus:ring-2 focus:ring-solar-500 focus:border-solar-500 outline-none">
+                                    <option value="solar">☀️ Solar Panel Cleaning (From Rs. 1,500)</option>
+                                    <option value="tank">💧 Water Tank Cleaning (From Rs. 1,500)</option>
+                                    <option value="electrician">⚡ Electrician Services (From Rs. 800)</option>
+                                    <option value="plumber">🔧 Plumber Services (From Rs. 800)</option>
+                                    <option value="combo">🔥 Combo: Solar + Tank Cleaning (Rs. 2,500)</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-slate-600 uppercase mb-1.5">Karachi Area</label>
+                                <select id="hero-area-select" class="w-full bg-slate-50 border border-slate-200 text-navy-900 font-medium text-sm rounded-xl px-4 py-3 focus:ring-2 focus:ring-solar-500 focus:border-solar-500 outline-none">
+                                    <option value="DHA">DHA (All Phases)</option>
+                                    <option value="Clifton">Clifton</option>
+                                    <option value="PECHS">PECHS / Tariq Road</option>
+                                    <option value="Gulshan-e-Iqbal">Gulshan-e-Iqbal</option>
+                                    <option value="Gulistan-e-Johar">Gulistan-e-Johar</option>
+                                    <option value="North Nazimabad">North Nazimabad</option>
+                                    <option value="Bahria Town">Bahria Town Karachi</option>
+                                    <option value="Malir">Malir / Cantt</option>
+                                    <option value="Korangi">Korangi / Landhi</option>
+                                    <option value="Other">Other Karachi Area</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-slate-600 uppercase mb-1.5">Aapka Mobile / WhatsApp Number</label>
+                                <input type="tel" id="hero-phone-input" required placeholder="03XX-XXXXXXX" class="w-full bg-slate-50 border border-slate-200 text-navy-900 text-sm rounded-xl px-4 py-3 focus:ring-2 focus:ring-solar-500 focus:border-solar-500 outline-none">
+                            </div>
+
+                            <button type="submit" class="w-full bg-solar-500 hover:bg-solar-600 text-white font-bold py-3.5 px-6 rounded-xl shadow-lg shadow-solar-500/30 transition-all flex items-center justify-center gap-2 text-base cursor-pointer">
+                                <span>Proceed to Estimate & Book</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </form>
+
+                        <p class="text-center text-xs text-slate-500 mt-4">
+                            <i class="fa-solid fa-lock text-emerald-600 mr-1"></i> No advance payment required. Pay after work!
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 3. SERVICES & INTERACTIVE RATE CARD ==================== -->
+    <section id="services" class="py-16 lg:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-10">
+            <span class="text-solar-600 font-bold text-xs uppercase tracking-widest bg-solar-500/10 px-3 py-1 rounded-full">Transparent Karachi Pricing</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 mt-3">Services & Standard Rate Card</h2>
+            <p class="text-slate-600 mt-3 text-sm sm:text-base">
+                Fix aur transparent rates—koi chupay hue charges nahi. Apni marzi ki service select karein aur foran booking form fill karein.
+            </p>
+        </div>
+
+        <!-- Filterable Category Tabs -->
+        <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-10" id="service-tabs">
+            <button data-filter="all" class="tab-btn active bg-navy-900 text-white font-semibold text-sm px-5 py-2.5 rounded-xl shadow-sm transition-all cursor-pointer">
+                All Services
+            </button>
+            <button data-filter="solar" class="tab-btn bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 font-semibold text-sm px-5 py-2.5 rounded-xl transition-all cursor-pointer">
+                ☀️ Solar Cleaning
+            </button>
+            <button data-filter="tank" class="tab-btn bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 font-semibold text-sm px-5 py-2.5 rounded-xl transition-all cursor-pointer">
+                💧 Tank Cleaning
+            </button>
+            <button data-filter="electrician" class="tab-btn bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 font-semibold text-sm px-5 py-2.5 rounded-xl transition-all cursor-pointer">
+                ⚡ Electrician
+            </button>
+            <button data-filter="plumber" class="tab-btn bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 font-semibold text-sm px-5 py-2.5 rounded-xl transition-all cursor-pointer">
+                🔧 Plumber
+            </button>
+        </div>
+
+        <!-- Rate Cards Grid (Populated via JS for clean data sync) -->
+        <div id="rate-cards-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Cards injected dynamically by JavaScript -->
+        </div>
+    </section>
+
+    <!-- ==================== 4. SMART COMBO & MONTHLY SUBSCRIPTION BANNER ==================== -->
+    <section id="offers" class="py-12 bg-navy-900 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+                <div>
+                    <span class="text-solar-400 font-bold text-xs uppercase tracking-widest">Bachat Offers</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold mt-1">Smart Combos & Monthly Plans</h2>
+                </div>
+                <p class="text-slate-300 text-sm max-w-md">
+                    Karachi ki gard-o-ghubar se solar efficiency 25% tak kam ho jati hai. Hamare special packages se paise aur bijli dono bachaein!
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- Offer 1: Solar + Tank Combo -->
+                <div class="bg-gradient-to-br from-navy-800 to-navy-950 border border-slate-700 rounded-3xl p-6 sm:p-8 flex flex-col justify-between relative overflow-hidden group">
+                    <div class="absolute top-4 right-4 bg-emerald-500 text-navy-950 text-xs font-extrabold px-3 py-1 rounded-full uppercase">
+                        Save Rs. 500
+                    </div>
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-solar-500/20 text-solar-400 flex items-center justify-center text-2xl mb-4">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-extrabold text-white">Solar + Overhead Tank Combo</h3>
+                        <p class="text-slate-300 text-sm mt-2 leading-relaxed">
+                            Ek hi visit mein up to 5kW Solar Panels ki dhulai aur Overhead Plastic Water Tank (500-1000 Ltr) ki mukammal chemical-free safai.
+                        </p>
+                        <div class="mt-5 flex items-baseline gap-3">
+                            <span class="text-3xl font-extrabold text-solar-400">Rs. 2,500</span>
+                            <span class="text-sm text-slate-400 line-through">Rs. 3,000</span>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-5 border-t border-slate-700/80">
+                        <button onclick="claimOffer('combo', 'Solar + Overhead Tank Combo (Rs. 2,500)')" class="w-full sm:w-auto bg-solar-500 hover:bg-solar-600 text-white font-bold px-6 py-3 rounded-xl transition-all flex items-center justify-center gap-2 cursor-pointer">
+                            <span>Claim Combo Offer</span>
+                            <i class="fa-solid fa-bolt"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Offer 2: Monthly Solar Dust-Care Plan -->
+                <div class="bg-gradient-to-br from-navy-800 to-navy-950 border border-solar-500/40 rounded-3xl p-6 sm:p-8 flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute top-4 right-4 bg-solar-500 text-white text-xs font-extrabold px-3 py-1 rounded-full uppercase">
+                        Most Popular
+                    </div>
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-sky-500/20 text-sky-400 flex items-center justify-center text-2xl mb-4">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-extrabold text-white">Monthly Solar Dust-Care Plan</h3>
+                        <p class="text-slate-300 text-sm mt-2 leading-relaxed">
+                            Har 15 din baad (2 visits per month) aapke solar system (up to 10kW) ki professional soft-brush washing taake bijli ki generation maximum rahe.
+                        </p>
+                        <div class="mt-5 flex items-baseline gap-3">
+                            <span class="text-3xl font-extrabold text-white">Rs. 2,500</span>
+                            <span class="text-sm text-solar-400 font-semibold">/ month (2 Visits)</span>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-5 border-t border-slate-700/80">
+                        <button onclick="claimOffer('solar', 'Monthly Solar Dust-Care Plan - 2 Visits/Mo (Rs. 2,500)')" class="w-full sm:w-auto bg-white text-navy-900 hover:bg-slate-100 font-bold px-6 py-3 rounded-xl transition-all flex items-center justify-center gap-2 cursor-pointer">
+                            <span>Subscribe Monthly Plan</span>
+                            <i class="fa-solid fa-arrow-right text-solar-500"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 5. INTERACTIVE INSTANT BOOKING & WHATSAPP GENERATOR ==================== -->
+    <section id="booking-section" class="py-16 lg:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-12">
+                
+                <!-- Left Info Sidebar -->
+                <div class="lg:col-span-4 bg-navy-900 text-white p-8 sm:p-10 flex flex-col justify-between">
+                    <div>
+                        <span class="text-solar-400 font-bold text-xs uppercase tracking-wider">Direct Booking</span>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold mt-2">Apna Ustaad Book Karein</h2>
+                        <p class="text-slate-300 text-sm mt-3 leading-relaxed">
+                            Form fill karein aur foran apna estimated bill dekhein. Submit karne par aapka order confirm hoga aur WhatsApp par direct dispatch team ko message chala jayega.
+                        </p>
+
+                        <div class="mt-8 space-y-5">
+                            <div class="flex items-start gap-3.5">
+                                <div class="w-8 h-8 rounded-lg bg-solar-500/20 text-solar-400 flex items-center justify-center shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm">Verified & Uniformed Staff</h4>
+                                    <p class="text-xs text-slate-400 mt-0.5">Ghar ki privacy aur security hamari pehli tarjeeh hai.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3.5">
+                                <div class="w-8 h-8 rounded-lg bg-solar-500/20 text-solar-400 flex items-center justify-center shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm">7-Day Service Warranty</h4>
+                                    <p class="text-xs text-slate-400 mt-0.5">Kaam mein koi shikayat ho toh 7 din ke andar free fix.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3.5">
+                                <div class="w-8 h-8 rounded-lg bg-solar-500/20 text-solar-400 flex items-center justify-center shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-wallet"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm">Cash or Online Payment</h4>
+                                    <p class="text-xs text-slate-400 mt-0.5">Kaam mukammal hone ke baad EasyPaisa, JazzCash ya Cash dein.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-10 pt-6 border-t border-slate-800">
+                        <p class="text-xs text-slate-400">Urgent Helpdesk (9 AM - 9 PM)</p>
+                        <a href="https://wa.me/923121088438" target="_blank" rel="noopener noreferrer" class="inline-block text-lg font-extrabold text-solar-400 hover:text-solar-300 mt-1 transition-colors">
+                            <i class="fa-brands fa-whatsapp mr-1.5"></i> 0312-1088438
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Interactive Form -->
+                <div class="lg:col-span-8 p-6 sm:p-10">
+                    <form id="full-booking-form" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <!-- Customer Name -->
+                            <div>
+                                <label for="cust-name" class="block text-xs font-bold text-slate-700 uppercase mb-2">Aapka Naam (Full Name) *</label>
+                                <input type="text" id="cust-name" required placeholder="e.g. Bilal Ahmed" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-navy-900 focus:ring-2 focus:ring-solar-500 focus:border-solar-500 outline-none">
+                            </div>
+
+                            <!-- Phone Number -->
+                            <div>
+                                <label for="cust-phone" class="block text-xs font-bold text-slate-700 uppercase mb-2">WhatsApp / Mobile Number *</label>
+                                <input type="tel" id="cust-phone" required placeholder="e.g. 0312-1088438" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-navy-900 focus:ring-2 focus:ring-solar-500 focus:border-solar-500 outline-none">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <!-- Karachi Area -->
+                            <div>
+                                <label for="cust-area" class="block text-xs font-bold text-slate-700 uppercase mb-2">Karachi Area *</label>
+                                <select id="cust-area" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-navy-900 font-medium focus:ring-2 focus:ring-solar-500 focus:border-solar-500 outline-none">
+                                    <option value="DHA">DHA (Defence)</option>
+                                    <option value="Clifton">Clifton</option>
+                                    <option value="PECHS">PECHS</option>
+                                    <option value="Gulshan-e-Iqbal">Gulshan-e-Iqbal</option>
+                                    <option value="North Nazimabad">North Nazimabad</option>
+                                    <option value="Bahria Town">Bahria Town Karachi</option>
+                                    <option value="Gulistan-e-Johar">Gulistan-e-Johar</option>
+                                    <option value="Malir">Malir</option>
+                                    <option value="Korangi">Korangi</option>
+                                    <option value="Other">Other Area in Karachi</option>
+                                </select>
+                            </div>
+
+                            <!-- Service Category -->
+                            <div>
+                                <label for="booking-category" class="block text-xs font-bold text-slate-700 uppercase mb-2">Service Category *</label>
+                                <select id="booking-category" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-navy-900 font-semibold focus:ring-2 focus:ring-solar-500 focus:border-solar-500 outline-none">
+                                    <option value="solar">Solar Cleaning</option>
+                                    <option value="tank">Water Tank Cleaning</option>
+                                    <option value="electrician">Electrician</option>
+                                    <option value="plumber">Plumber</option>
+                                    <option value="combo">Smart Combo / Subscription</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Specific Package Dropdown (Dynamically populated) -->
+                        <div>
+                            <label for="booking-package" class="block text-xs font-bold text-slate-700 uppercase mb-2">Specific Package / Kaam ki Tafseel *</label>
+                            <select id="booking-package" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-navy-900 font-semibold focus:ring-2 focus:ring-solar-500 focus:border-solar-500 outline-none">
+                                <!-- Options populated dynamically -->
+                            </select>
+                        </div>
+
+                        <!-- Commercial Plate Calculator (Shown only if Commercial >15kW is selected) -->
+                        <div id="commercial-plates-box" class="hidden bg-amber-50 border border-amber-200 rounded-2xl p-4">
+                            <label for="plate-count" class="block text-xs font-bold text-amber-900 uppercase mb-1.5">Total Solar Plates ki Tadaad (Min 30 Plates)</label>
+                            <div class="flex items-center gap-4">
+                                <input type="number" id="plate-count" min="15" max="500" value="35" class="w-32 bg-white border border-amber-300 rounded-xl px-3 py-2 text-sm font-bold text-navy-900 outline-none">
+                                <span class="text-xs text-amber-800 font-medium">@ Rs. 120 per plate auto-calculated</span>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <!-- Preferred Date -->
+                            <div>
+                                <label for="booking-date" class="block text-xs font-bold text-slate-700 uppercase mb-2">Preferred Date *</label>
+                                <input type="date" id="booking-date" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-navy-900 focus:ring-2 focus:ring-solar-500 focus:border-solar-500 outline-none">
+                            </div>
+
+                            <!-- Preferred Time Slot -->
+                            <div>
+                                <label for="booking-time" class="block text-xs font-bold text-slate-700 uppercase mb-2">Time Slot *</label>
+                                <select id="booking-time" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-navy-900 focus:ring-2 focus:ring-solar-500 focus:border-solar-500 outline-none">
+                                    <option value="Morning (9:00 AM - 12:00 PM)">Morning (9:00 AM - 12:00 PM)</option>
+                                    <option value="Afternoon (12:00 PM - 4:00 PM)">Afternoon (12:00 PM - 4:00 PM)</option>
+                                    <option value="Evening (4:00 PM - 8:00 PM)">Evening (4:00 PM - 8:00 PM)</option>
+                                    <option value="Urgent (Within 60 Mins)">⚡ Urgent (Within 60 Mins)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Address / Notes -->
+                        <div>
+                            <label for="booking-notes" class="block text-xs font-bold text-slate-700 uppercase mb-2">Complete Address / Extra Notes</label>
+                            <textarea id="booking-notes" rows="2" placeholder="House #, Street/Block, Landmark ya maslay ki mazeed tafseel..." class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-navy-900 focus:ring-2 focus:ring-solar-500 focus:border-solar-500 outline-none"></textarea>
+                        </div>
+
+                        <!-- Real-Time Estimated Total Bar -->
+                        <div class="bg-slate-900 text-white rounded-2xl p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                            <div>
+                                <span class="text-xs text-slate-400 uppercase font-semibold tracking-wider">Estimated Total (PKR)</span>
+                                <div id="estimated-price-display" class="text-2xl sm:text-3xl font-extrabold text-solar-400 mt-0.5">
+                                    Rs. 1,500
+                                </div>
+                                <span class="text-[11px] text-slate-400">Final bill confirmed after inspection. No hidden fees.</span>
+                            </div>
+
+                            <button type="submit" class="bg-solar-500 hover:bg-solar-600 text-white font-bold px-7 py-4 rounded-xl shadow-lg shadow-solar-500/30 transition-all flex items-center justify-center gap-2.5 text-base cursor-pointer shrink-0">
+                                <i class="fa-brands fa-whatsapp text-xl"></i>
+                                <span>Confirm & Generate WhatsApp Order</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 6. HOW IT WORKS (3 SIMPLE STEPS) ==================== -->
+    <section id="how-it-works" class="py-16 bg-white border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-solar-600 font-bold text-xs uppercase tracking-widest">Simple Process</span>
+                <h2 class="text-3xl font-extrabold text-navy-900 mt-2">UstaadHub Kaise Kaam Karta Hai?</h2>
+                <p class="text-slate-600 text-sm mt-2">Sirf 3 aasaan steps mein ghar ke har kaam se be-fikar ho jayein.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="bg-[#F8FAFC] border border-slate-200/80 rounded-3xl p-7 relative">
+                    <div class="w-12 h-12 rounded-2xl bg-navy-900 text-white font-extrabold text-lg flex items-center justify-center mb-5 shadow-md">
+                        01
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900">Service Select Karein</h3>
+                    <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                        Rate card se apna package chunein, Karachi ka area aur apna suitable time slot select karke booking submit karein.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-[#F8FAFC] border border-slate-200/80 rounded-3xl p-7 relative">
+                    <div class="w-12 h-12 rounded-2xl bg-solar-500 text-white font-extrabold text-lg flex items-center justify-center mb-5 shadow-md">
+                        02
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900">Ustaad Dispatch Hoga</h3>
+                    <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                        Hamara qareebi verified technician (Ustaad) tamam zaroori tools aur equipment ke sath aapke darwaze par pohanch jayega.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-[#F8FAFC] border border-slate-200/80 rounded-3xl p-7 relative">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-600 text-white font-extrabold text-lg flex items-center justify-center mb-5 shadow-md">
+                        03
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900">Kaam Mukammal & Warranty</h3>
+                    <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                        Tasalli bakhsh kaam ke baad payment karein aur UstaadHub ki taraf se 7-Day Service Warranty hasil karein.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 7. JOIN AS USTAAD (TECHNICIAN REGISTRATION) ==================== -->
+    <section id="join-ustaad" class="py-16 lg:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-gradient-to-r from-navy-900 via-navy-800 to-navy-900 rounded-3xl p-8 sm:p-12 text-white shadow-xl border border-slate-700 flex flex-col lg:flex-row items-center justify-between gap-8">
+            <div class="max-w-2xl space-y-4">
+                <div class="inline-flex items-center gap-2 bg-solar-500/20 text-solar-400 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                    <i class="fa-solid fa-handshake"></i>
+                    <span>Partners & Technicians</span>
+                </div>
+                <h2 class="text-2xl sm:text-4xl font-extrabold leading-tight">
+                    Kya Aap Maahir Ustaad Hain? <span class="text-solar-400">UstaadHub Network Join Karein!</span>
+                </h2>
+                <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                    Agar aap Karachi mein Solar Technician, Plumber, ya Electrician hain, toh rozana confirmed orders hasil karein aur apni mahana aamdani barhaein.
+                </p>
+                <div class="flex flex-wrap gap-4 text-xs sm:text-sm font-semibold text-slate-200 pt-1">
+                    <span><i class="fa-solid fa-circle-check text-emerald-400 mr-1.5"></i>Daily Confirmed Orders</span>
+                    <span><i class="fa-solid fa-circle-check text-emerald-400 mr-1.5"></i>Apne Area Mein Kaam</span>
+                    <span><i class="fa-solid fa-circle-check text-emerald-400 mr-1.5"></i>70% - 80% Direct Payout</span>
+                </div>
+            </div>
+
+            <div class="shrink-0 w-full lg:w-auto">
+                <button id="open-ustaad-modal-btn" class="w-full lg:w-auto bg-solar-500 hover:bg-solar-600 text-white font-extrabold px-8 py-4 rounded-2xl shadow-lg shadow-solar-500/30 transition-all text-base flex items-center justify-center gap-2.5 cursor-pointer">
+                    <i class="fa-solid fa-user-plus"></i>
+                    <span>Register as Ustaad</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 8. FOOTER ==================== -->
+    <footer class="bg-navy-950 text-slate-300 pt-14 pb-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-10 border-b border-slate-800">
+                <!-- Col 1: Brand -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-navy-800 border-2 border-solar-500 flex items-center justify-center text-solar-500 font-extrabold">
+                            UH
+                        </div>
+                        <span class="text-2xl font-extrabold text-white">Ustaad<span class="text-solar-500">Hub</span></span>
+                    </div>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Har Kaam Ka Maahir, Ek Hi Jagah. Karachi ka bharosay mand home maintenance aur solar cleaning platform.
+                    </p>
+                    <div class="flex items-center gap-3 pt-1">
+                        <a href="https://wa.me/923121088438" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-solar-500 text-white flex items-center justify-center transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="#services" aria-label="Facebook" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-solar-500 text-white flex items-center justify-center transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#services" aria-label="Instagram" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-solar-500 text-white flex items-center justify-center transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Services -->
+                <div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Our Services</h4>
+                    <ul class="space-y-2.5 text-sm text-slate-400">
+                        <li><a href="#services" class="hover:text-solar-400 transition-colors">Solar Panel Washing & Care</a></li>
+                        <li><a href="#services" class="hover:text-solar-400 transition-colors">Overhead & Underground Tank Cleaning</a></li>
+                        <li><a href="#services" class="hover:text-solar-400 transition-colors">Home & Commercial Electrician</a></li>
+                        <li><a href="#services" class="hover:text-solar-400 transition-colors">Plumbing & Water Motor Repair</a></li>
+                        <li><a href="#offers" class="hover:text-solar-400 transition-colors">Monthly Dust-Care Subscriptions</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Karachi Areas -->
+                <div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Service Areas (Karachi)</h4>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        DHA (Phase 1–8), Clifton, PECHS, Bahadurabad, Gulshan-e-Iqbal, Gulistan-e-Johar, North Nazimabad, FB Area, Bahria Town, Malir Cantt & Korangi.
+                    </p>
+                </div>
+
+                <!-- Col 4: Contact & Timings -->
+                <div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Working Hours & Contact</h4>
+                    <ul class="space-y-2.5 text-sm text-slate-400">
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-clock text-solar-500"></i> Mon – Sun: 9:00 AM – 9:00 PM</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-phone text-solar-500"></i> <a href="tel:+923121088438" class="hover:text-solar-400 transition-colors">0312-1088438</a></li>
+                        <li class="flex items-center gap-2"><i class="fa-brands fa-whatsapp text-solar-500"></i> <a href="https://wa.me/923121088438" target="_blank" rel="noopener noreferrer" class="hover:text-solar-400 transition-colors">+92 312 1088438</a></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-solar-500"></i> Main Shahrah-e-Faisal, Karachi</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+                <p>&copy; 2026 UstaadHub Pakistan. All Rights Reserved.</p>
+                <p>Built for Karachi Homes & Businesses.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== MODAL 1: BOOKING CONFIRMATION & WHATSAPP GENERATOR ==================== -->
+    <div id="booking-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-navy-950/80 backdrop-blur-sm p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-slate-200 relative animate-[fadeIn_0.2s_ease-out]">
+            <button id="close-booking-modal" class="absolute top-5 right-5 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center cursor-pointer">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-3xl mb-4">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+
+            <h3 class="text-2xl font-extrabold text-navy-900">Booking Summary Taiyar Hai!</h3>
+            <p class="text-sm text-slate-600 mt-1">
+                Aapki details niche di gayi hain. Ab ek click mein WhatsApp par hamari dispatch team ko order bhej dein:
+            </p>
+
+            <!-- Summary Box -->
+            <div id="modal-summary-content" class="bg-slate-50 border border-slate-200 rounded-2xl p-4 mt-4 text-sm space-y-2 text-navy-900">
+                <!-- Populated dynamically -->
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="mt-6 space-y-3">
+                <a id="whatsapp-send-link" href="#" target="_blank" rel="noopener noreferrer" class="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-extrabold py-3.5 px-6 rounded-xl shadow-lg flex items-center justify-center gap-2 text-base transition-all">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                    <span>Send Order on WhatsApp</span>
+                </a>
+
+                <button id="copy-order-btn" type="button" class="w-full bg-slate-100 hover:bg-slate-200 text-navy-900 font-semibold py-2.5 px-4 rounded-xl text-xs transition-all flex items-center justify-center gap-2 cursor-pointer">
+                    <i class="fa-regular fa-copy"></i>
+                    <span id="copy-btn-text">Copy Order Text to Clipboard</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== MODAL 2: JOIN AS USTAAD REGISTRATION ==================== -->
+    <div id="ustaad-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-navy-950/80 backdrop-blur-sm p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl border border-slate-200 relative">
+            <button id="close-ustaad-modal" class="absolute top-5 right-5 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center cursor-pointer">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <span class="text-xs font-bold uppercase tracking-wider text-solar-600 bg-solar-500/10 px-2.5 py-1 rounded-lg">Technician Onboarding</span>
+            <h3 class="text-2xl font-extrabold text-navy-900 mt-2">UstaadHub Join Karein</h3>
+            <p class="text-xs text-slate-500 mt-1">Apna hunar aur area batayein, hamari team verification ke liye rabta karegi.</p>
+
+            <form id="ustaad-register-form" class="space-y-4 mt-5">
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Ustaad ka Naam *</label>
+                    <input type="text" id="tech-name" required placeholder="e.g. Muhammad Kamran" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm outline-none focus:ring-2 focus:ring-solar-500">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Mobile / WhatsApp Number *</label>
+                    <input type="tel" id="tech-phone" required placeholder="03XX-XXXXXXX" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm outline-none focus:ring-2 focus:ring-solar-500">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Aapka Hunar (Skill) *</label>
+                    <select id="tech-skill" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm font-semibold text-navy-900 outline-none focus:ring-2 focus:ring-solar-500">
+                        <option value="Solar Cleaner & Technician">Solar Cleaner / Technician</option>
+                        <option value="Electrician">Electrician</option>
+                        <option value="Plumber">Plumber</option>
+                        <option value="Water Tank Cleaner">Water Tank Cleaner</option>
+                        <option value="Multi-Skilled (All Rounder)">Multi-Skilled (All Rounder)</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Aapka Rehaishi Area (Karachi) *</label>
+                    <input type="text" id="tech-area" required placeholder="e.g. Gulshan-e-Iqbal, Korangi, Nazimabad" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm outline-none focus:ring-2 focus:ring-solar-500">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Tajurba (Experience)</label>
+                    <select id="tech-exp" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm text-navy-900 outline-none focus:ring-2 focus:ring-solar-500">
+                        <option value="1-2 Years">1 – 2 Years</option>
+                        <option value="3-5 Years">3 – 5 Years</option>
+                        <option value="5+ Years">5+ Years (Senior Ustaad)</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="w-full bg-navy-900 hover:bg-navy-800 text-white font-bold py-3.5 rounded-xl shadow-md transition-all cursor-pointer">
+                    Submit Application
+                </button>
+            </form>
+
+            <!-- Inline confirmation message box (No alert() used) -->
+            <div id="ustaad-success-box" class="hidden mt-4 bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-2xl p-4 text-sm">
+                <p class="font-bold"><i class="fa-solid fa-circle-check mr-1.5"></i> Shukriya Ustaad!</p>
+                <p class="text-xs mt-1">Aapki darkhwast darj ho gayi hai. Hamara representative jald aapke WhatsApp par CNIC verification ke liye rabta karega.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== JAVASCRIPT APPLICATION LOGIC ==================== -->
+    <script>
+        // 1. Central Karachi Service Catalog & Pricing Database
+        const serviceCatalog = [
+            {
+                id: 'solar-5kw',
+                category: 'solar',
+                badge: 'Solar Cleaning',
+                icon: 'fa-solar-panel',
+                title: 'Up to 5 kW Solar System',
+                subtitle: '10 – 12 Solar Plates Washing',
+                description: 'De-ionized water aur soft microfiber brush se dhulai. Bird droppings aur dust ki mukammal safai.',
+                priceText: 'Rs. 1,500',
+                numericPrice: 1500,
+                isCommercial: false
+            },
+            {
+                id: 'solar-10kw',
+                category: 'solar',
+                badge: 'Solar Cleaning',
+                icon: 'fa-solar-panel',
+                title: '6 kW – 10 kW Solar System',
+                subtitle: '14 – 20 Solar Plates Washing',
+                description: 'Ghar ke bade solar systems ke liye deep cleaning aur inverter/wiring visual health check.',
+                priceText: 'Rs. 2,500',
+                numericPrice: 2500,
+                isCommercial: false
+            },
+            {
+                id: 'solar-15kw',
+                category: 'solar',
+                badge: 'Solar Cleaning',
+                icon: 'fa-solar-panel',
+                title: '12 kW – 15 kW Solar System',
+                subtitle: '22 – 30 Solar Plates Washing',
+                description: '2-person specialized solar cleaning squad with safety harness aur streak-free wash.',
+                priceText: 'Rs. 3,500',
+                numericPrice: 3500,
+                isCommercial: false
+            },
+            {
+                id: 'solar-commercial',
+                category: 'solar',
+                badge: 'Commercial Solar',
+                icon: 'fa-industry',
+                title: 'Commercial / Above 15 kW',
+                subtitle: 'Factories, Offices & Mosques',
+                description: '30 plates se zyada ke systems ke liye per-plate economical rate aur scheduled maintenance.',
+                priceText: 'Rs. 120 / plate',
+                numericPrice: 120,
+                isCommercial: true
+            },
+            {
+                id: 'tank-overhead',
+                category: 'tank',
+                badge: 'Tank Cleaning',
+                icon: 'fa-droplet',
+                title: 'Overhead Plastic Tank',
+                subtitle: '500 – 1000 Liters Capacity',
+                description: 'Dewatering pump, high-pressure jet wash, aur anti-bacterial UV/food-grade safai.',
+                priceText: 'Rs. 1,500',
+                numericPrice: 1500,
+                isCommercial: false
+            },
+            {
+                id: 'tank-underground',
+                category: 'tank',
+                badge: 'Tank Cleaning',
+                icon: 'fa-water',
+                title: 'Underground Cement Tank',
+                subtitle: 'Standard Residential Tank',
+                description: 'Keechar (sludge) removal, deewaron ki scrubbing, vacuum extraction aur sanitization.',
+                priceText: 'Rs. 2,500',
+                numericPrice: 2500,
+                isCommercial: false
+            },
+            {
+                id: 'tank-combo',
+                category: 'tank',
+                badge: 'Tank Cleaning',
+                icon: 'fa-faucet-drip',
+                title: 'Full Tank Combo (UG + OH)',
+                subtitle: 'Underground + Overhead Tank',
+                description: 'Dono tanks ki ek sath mukammal safai taake ghar mein 100% saaf aur sehatmand pani aaye.',
+                priceText: 'Rs. 3,500',
+                numericPrice: 3500,
+                isCommercial: false
+            },
+            {
+                id: 'elec-visit',
+                category: 'electrician',
+                badge: 'Electrician',
+                icon: 'fa-bolt',
+                title: 'Inspection / Minimum Visit',
+                subtitle: 'Fault Tracing & Minor Repair',
+                description: 'Short circuit tracing, socket/switch replacement, ya UPS wiring inspection.',
+                priceText: 'Rs. 800',
+                numericPrice: 800,
+                isCommercial: false
+            },
+            {
+                id: 'elec-db',
+                category: 'electrician',
+                badge: 'Electrician',
+                icon: 'fa-plug-circle-bolt',
+                title: 'Breaker / DB Box / Fan Install',
+                subtitle: 'Heavy Electrical Work',
+                description: 'Main DB box repair, circuit breaker change, ceiling fan ya chandelier installation.',
+                priceText: 'Rs. 1,000 – 1,500',
+                numericPrice: 1200,
+                isCommercial: false
+            },
+            {
+                id: 'plumb-visit',
+                category: 'plumber',
+                badge: 'Plumber',
+                icon: 'fa-wrench',
+                title: 'Inspection / Tap & Mixer Fix',
+                subtitle: 'Leakage & Sanitary Fittings',
+                description: 'Nalka (tap), shower mixer, Muslim shower, ya flush tank leakage ki repairing/replacement.',
+                priceText: 'Rs. 800 – 1,200',
+                numericPrice: 1000,
+                isCommercial: false
+            },
+            {
+                id: 'plumb-motor',
+                category: 'plumber',
+                badge: 'Plumber',
+                icon: 'fa-gears',
+                title: 'Water Motor / Pump Repair',
+                subtitle: 'Donkey Pump & Pressure Motor',
+                description: 'Water pump installation, pressure switch setting, aur suction line air-lock fixing.',
+                priceText: 'Rs. 1,500 – 2,500',
+                numericPrice: 1800,
+                isCommercial: false
+            }
+        ];
+
+        // Extra combo options for booking dropdown
+        const comboPackages = [
+            {
+                id: 'combo-solar-tank',
+                category: 'combo',
+                title: 'Solar (up to 5kW) + Overhead Tank Combo',
+                priceText: 'Rs. 2,500',
+                numericPrice: 2500,
+                isCommercial: false
+            },
+            {
+                id: 'combo-monthly-solar',
+                category: 'combo',
+                title: 'Monthly Solar Dust-Care Plan (2 Visits/Month)',
+                priceText: 'Rs. 2,500',
+                numericPrice: 2500,
+                isCommercial: false
+            }
+        ];
+
+        // DOM Elements
+        const rateCardsGrid = document.getElementById('rate-cards-grid');
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const bookingCategory = document.getElementById('booking-category');
+        const bookingPackage = document.getElementById('booking-package');
+        const commercialPlatesBox = document.getElementById('commercial-plates-box');
+        const plateCountInput = document.getElementById('plate-count');
+        const estimatedPriceDisplay = document.getElementById('estimated-price-display');
+        const bookingDateInput = document.getElementById('booking-date');
+
+        // Set default date to today
+        const todayStr = new Date().toISOString().split('T')[0];
+        bookingDateInput.value = todayStr;
+        bookingDateInput.min = todayStr;
+
+        // 2. Render Rate Cards dynamically
+        function renderRateCards(filter = 'all') {
+            rateCardsGrid.innerHTML = '';
+            const filtered = filter === 'all' 
+                ? serviceCatalog 
+                : serviceCatalog.filter(item => item.category === filter);
+
+            filtered.forEach(service => {
+                const card = document.createElement('div');
+                card.className = 'bg-white rounded-3xl p-6 border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-solar-500/40 transition-all flex flex-col justify-between group';
+                
+                card.innerHTML = `
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-slate-100 text-navy-800">
+                                ${service.badge}
+                            </span>
+                            <div class="w-10 h-10 rounded-xl bg-navy-900/5 text-navy-900 group-hover:bg-solar-500 group-hover:text-white transition-colors flex items-center justify-center">
+                                <i class="fa-solid ${service.icon}"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-extrabold text-navy-900">${service.title}</h3>
+                        <p class="text-xs font-semibold text-solar-600 mt-0.5">${service.subtitle}</p>
+                        <p class="text-sm text-slate-600 mt-3 leading-relaxed">${service.description}</p>
+                    </div>
+                    
+                    <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between gap-3">
+                        <div>
+                            <span class="block text-[11px] text-slate-400 font-medium uppercase">Standard Rate</span>
+                            <span class="text-xl font-extrabold text-navy-900">${service.priceText}</span>
+                        </div>
+                        <button type="button" onclick="selectServiceAndScroll('${service.category}', '${service.id}')" class="bg-navy-900 hover:bg-solar-500 text-white text-xs font-bold px-4 py-3 rounded-xl transition-colors cursor-pointer flex items-center gap-1.5">
+                            <span>Select Service</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                `;
+                rateCardsGrid.appendChild(card);
+            });
+        }
+
+        // Tab Filtering Logic
+        tabButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                tabButtons.forEach(b => {
+                    b.classList.remove('bg-navy-900', 'text-white', 'shadow-sm');
+                    b.classList.add('bg-white', 'text-slate-700', 'border', 'border-slate-200');
+                });
+                btn.classList.remove('bg-white', 'text-slate-700', 'border', 'border-slate-200');
+                btn.classList.add('bg-navy-900', 'text-white', 'shadow-sm');
+                
+                renderRateCards(btn.getAttribute('data-filter'));
+            });
+        });
+
+        // 3. Populate Specific Packages based on Category
+        function populatePackages(category, selectedPackageId = null) {
+            bookingPackage.innerHTML = '';
+            const allItems = [...serviceCatalog, ...comboPackages];
+            const matching = allItems.filter(item => item.category === category);
+
+            matching.forEach(pkg => {
+                const option = document.createElement('option');
+                option.value = pkg.id;
+                option.textContent = `${pkg.title} — (${pkg.priceText})`;
+                option.dataset.price = pkg.numericPrice;
+                option.dataset.priceText = pkg.priceText;
+                option.dataset.commercial = pkg.isCommercial;
+                if (selectedPackageId && pkg.id === selectedPackageId) {
+                    option.selected = true;
+                }
+                bookingPackage.appendChild(option);
+            });
+
+            updateEstimatedTotal();
+        }
+
+        // Calculate and display Real-Time Estimated Total
+        function updateEstimatedTotal() {
+            const selectedOption = bookingPackage.options[bookingPackage.selectedIndex];
+            if (!selectedOption) return;
+
+            const isCommercial = selectedOption.dataset.commercial === 'true';
+            if (isCommercial) {
+                commercialPlatesBox.classList.remove('hidden');
+                const plates = Math.max(1, parseInt(plateCountInput.value) || 30);
+                const total = plates * 120;
+                estimatedPriceDisplay.textContent = `Rs. ${total.toLocaleString()} (${plates} Plates)`;
+            } else {
+                commercialPlatesBox.classList.add('hidden');
+                estimatedPriceDisplay.textContent = selectedOption.dataset.priceText;
+            }
+        }
+
+        bookingCategory.addEventListener('change', (e) => {
+            populatePackages(e.target.value);
+        });
+
+        bookingPackage.addEventListener('change', updateEstimatedTotal);
+        plateCountInput.addEventListener('input', updateEstimatedTotal);
+
+        // Pre-fill booking form from Rate Card 'Select Service' button
+        window.selectServiceAndScroll = function(category, packageId) {
+            bookingCategory.value = category;
+            populatePackages(category, packageId);
+            document.getElementById('booking-section').scrollIntoView({ behavior: 'smooth' });
+        };
+
+        // Pre-fill booking form from Offer Banner
+        window.claimOffer = function(category, offerLabel) {
+            const targetCat = category === 'combo' ? 'combo' : 'combo';
+            bookingCategory.value = targetCat;
+            populatePackages(targetCat);
+            if (offerLabel.includes('Monthly')) {
+                bookingPackage.value = 'combo-monthly-solar';
+            } else {
+                bookingPackage.value = 'combo-solar-tank';
+            }
+            updateEstimatedTotal();
+            document.getElementById('booking-section').scrollIntoView({ behavior: 'smooth' });
+        };
+
+        // 4. Hero Quick Form -> Transfers data to Full Booking Form
+        document.getElementById('hero-quick-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const serviceVal = document.getElementById('hero-service-select').value;
+            const areaVal = document.getElementById('hero-area-select').value;
+            const phoneVal = document.getElementById('hero-phone-input').value;
+
+            bookingCategory.value = serviceVal;
+            populatePackages(serviceVal);
+            document.getElementById('cust-area').value = areaVal;
+            document.getElementById('cust-phone').value = phoneVal;
+
+            document.getElementById('booking-section').scrollIntoView({ behavior: 'smooth' });
+            setTimeout(() => document.getElementById('cust-name').focus(), 600);
+        });
+
+        // 5. Full Booking Form Submission & WhatsApp Message Generator
+        const bookingModal = document.getElementById('booking-modal');
+        const modalSummaryContent = document.getElementById('modal-summary-content');
+        const whatsappSendLink = document.getElementById('whatsapp-send-link');
+        const copyOrderBtn = document.getElementById('copy-order-btn');
+        const copyBtnText = document.getElementById('copy-btn-text');
+        let latestFormattedOrder = '';
+
+        document.getElementById('full-booking-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('cust-name').value.trim();
+            const phone = document.getElementById('cust-phone').value.trim();
+            const area = document.getElementById('cust-area').value;
+            const categoryText = bookingCategory.options[bookingCategory.selectedIndex].text;
+            const packageText = bookingPackage.options[bookingPackage.selectedIndex].text;
+            const date = document.getElementById('booking-date').value;
+            const time = document.getElementById('booking-time').value;
+            const notes = document.getElementById('booking-notes').value.trim() || 'None';
+            const estimate = estimatedPriceDisplay.textContent;
+
+            // Populate Modal Summary HTML
+            modalSummaryContent.innerHTML = `
+                <div class="flex justify-between border-b border-slate-200 pb-1.5">
+                    <span class="text-slate-500">Client Name:</span>
+                    <span class="font-bold">${name}</span>
+                </div>
+                <div class="flex justify-between border-b border-slate-200 pb-1.5">
+                    <span class="text-slate-500">Phone:</span>
+                    <span class="font-bold">${phone}</span>
+                </div>
+                <div class="flex justify-between border-b border-slate-200 pb-1.5">
+                    <span class="text-slate-500">Karachi Area:</span>
+                    <span class="font-bold">${area}</span>
+                </div>
+                <div class="flex justify-between border-b border-slate-200 pb-1.5">
+                    <span class="text-slate-500">Service:</span>
+                    <span class="font-bold text-right">${packageText}</span>
+                </div>
+                <div class="flex justify-between border-b border-slate-200 pb-1.5">
+                    <span class="text-slate-500">Schedule:</span>
+                    <span class="font-bold">${date} | ${time}</span>
+                </div>
+                <div class="flex justify-between pt-1">
+                    <span class="text-slate-600 font-semibold">Estimated Total:</span>
+                    <span class="font-extrabold text-solar-600 text-base">${estimate}</span>
+                </div>
+            `;
+
+            // Build Formatted WhatsApp Message
+            latestFormattedOrder = `*Assalam-o-Alaikum UstaadHub!* 🛠️\nMujhe Karachi mein service book karni hai:\n\n` +
+                `👤 *Name:* ${name}\n` +
+                `📞 *Phone:* ${phone}\n` +
+                `📍 *Area:* ${area}\n` +
+                `⚡ *Category:* ${categoryText}\n` +
+                `📦 *Package:* ${packageText}\n` +
+                `📅 *Date & Time:* ${date} (${time})\n` +
+                `💰 *Estimated Bill:* ${estimate}\n` +
+                `📝 *Address/Notes:* ${notes}`;
+
+            // Business WhatsApp Number
+            const businessNumber = '923121088438';
+            const waUrl = `https://wa.me/${businessNumber}?text=${encodeURIComponent(latestFormattedOrder)}`;
+            whatsappSendLink.href = waUrl;
+
+            // Show Modal
+            bookingModal.classList.remove('hidden');
+            bookingModal.classList.add('flex');
+        });
+
+        // Copy Order Text to Clipboard using execCommand fallback
+        copyOrderBtn.addEventListener('click', () => {
+            const tempTextarea = document.createElement('textarea');
+            tempTextarea.value = latestFormattedOrder;
+            document.body.appendChild(tempTextarea);
+            tempTextarea.select();
+            try {
+                document.execCommand('copy');
+                copyBtnText.textContent = 'Copied! Paste anywhere';
+                setTimeout(() => {
+                    copyBtnText.textContent = 'Copy Order Text to Clipboard';
+                }, 2500);
+            } catch (err) {
+                copyBtnText.textContent = 'Unable to copy';
+            }
+            document.body.removeChild(tempTextarea);
+        });
+
+        document.getElementById('close-booking-modal').addEventListener('click', () => {
+            bookingModal.classList.add('hidden');
+            bookingModal.classList.remove('flex');
+        });
+
+        // 6. Technician Registration Modal Logic
+        const ustaadModal = document.getElementById('ustaad-modal');
+        const ustaadForm = document.getElementById('ustaad-register-form');
+        const ustaadSuccessBox = document.getElementById('ustaad-success-box');
+
+        document.getElementById('open-ustaad-modal-btn').addEventListener('click', () => {
+            ustaadSuccessBox.classList.add('hidden');
+            ustaadForm.classList.remove('hidden');
+            ustaadModal.classList.remove('hidden');
+            ustaadModal.classList.add('flex');
+        });
+
+        document.getElementById('close-ustaad-modal').addEventListener('click', () => {
+            ustaadModal.classList.add('hidden');
+            ustaadModal.classList.remove('flex');
+        });
+
+        ustaadForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            ustaadForm.classList.add('hidden');
+            ustaadSuccessBox.classList.remove('hidden');
+            ustaadForm.reset();
+        });
+
+        // 7. Mobile Navigation Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+
+        // Initialize Page
+        renderRateCards('all');
+        populatePackages('solar');
+    </script>
+</body>
+</html>
